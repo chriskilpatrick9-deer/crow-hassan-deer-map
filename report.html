@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>2026 Crow-Hassan Deer Hunt: Final Coordinator Report</title>
+<script>(function(){try{var t=localStorage.getItem('mbrb-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+
 <meta name="description" content="Final 2026 Crow-Hassan Park Reserve deer hunt report: 16 harvest entries, 15 of 16 recovered, 371 deer seen in 2,364 hunter-hours. Zone-level only.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="2026 Crow-Hassan Deer Hunt: Final Coordinator Report">
@@ -134,11 +136,22 @@
     .map-frame { height: 500px; break-inside: avoid; }
     .banner, a { color: inherit; }
   }
+
+  .themebtn { float: right; width: 2.2rem; height: 2.2rem; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--ink); font-size: 1.05rem; line-height: 2.15rem; text-align: center; padding: 0; cursor: pointer; }
+  html[data-theme="dark"] {
+    --bg: #16181b; --paper: #22262b; --ink: #e8eaed; --muted: #9aa3ab; --line: #3a4148;
+    --accent: #8fbf96; --accent-soft: #243128; --warn-bg: #3a2e18; --warn-ink: #f0c98a; --fill-low: #2c2a22;
+  }
+  html[data-theme="dark"] .banner { border-color: #3d5a40; }
+  html[data-theme="dark"] th { background: #2a2f35; color: var(--muted); }
+  html[data-theme="dark"] .bar .track, html[data-theme="dark"] .pbar .track { background: #3a4148; }
+  html[data-theme="dark"] a { color: var(--accent); }
+
 </style>
 </head>
 <body>
 <main>
-  <h1>2026 Crow-Hassan Deer Hunt: Final Coordinator Report</h1>
+  <h1>2026 Crow-Hassan Deer Hunt: Final Coordinator Report <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></h1>
   <p class="lede">Sixteen harvest entries over six hunt days at Crow-Hassan Park Reserve (MBRB hunt 10). Hunters logged 371 deer seen in 2,364 hours, or 15.7 per 100 hours. Fifteen of the 16 entries are listed as recovered; one Nov 15 Zone 3 adult buck is listed as wounded.</p>
   <nav class="muted">
     <a href="#totals">Totals</a>
@@ -183,6 +196,7 @@
     <iframe src="index.html" title="Crow-Hassan deer activity heatmap" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <p class="caption"><a href="https://chriskilpatrick9-deer.github.io/crow-hassan-deer-map/">Open full map</a></p>
+  <p class="caption"><a href="https://chriskilpatrick9-deer.github.io/chm-a4oneez088/report.html">Coordinators: detailed hunter heatmap</a></p>
 
   <h2 id="zones">By zone</h2>
   <p class="caption">Rate is deer seen per 100 hunter-hours. AM and PM are based on when the sit started (AM = in before noon). An asterisk marks a rate with fewer than 50 hunter-hours.</p>
@@ -334,5 +348,15 @@ renderBars(document.getElementById("wind-bars"), [
   {label:"NW", value:27.8, display:"27.8 · 100 h", peak:true}
 ], 30);
 </script>
+
+<script>
+(function(){const KEY='mbrb-theme',btn=document.getElementById('themebtn');
+ function sys(){try{return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){return 'light'}}
+ function cur(){try{const t=localStorage.getItem(KEY);if(t==='dark'||t==='light')return t}catch(e){} return sys()}
+ function paint(t){document.documentElement.setAttribute('data-theme',t);if(btn){const d=t==='dark';btn.textContent=d?'☀':'☾';btn.title=d?'Light mode':'Dark mode';btn.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}}
+ paint(cur());if(btn)btn.onclick=()=>{const t=cur()==='dark'?'light':'dark';try{localStorage.setItem(KEY,t)}catch(e){}paint(t)};
+ try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem(KEY))return}catch(x){}paint(e.matches?'dark':'light')})}catch(e){}})();
+</script>
+
 </body>
 </html>
