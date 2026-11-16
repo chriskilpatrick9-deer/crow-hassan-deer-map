@@ -268,11 +268,8 @@
   <ul>
     <li>The 2nd period was much busier than the 1st. November sits saw 23.0 deer per 100 hours, more than three times the October rate of 6.7, and 10 of the 16 harvests came then. October was also unusually warm, with highs in the 70s and 90s.</li>
     <li>Afternoon sits had a modest edge: 17.9 seen per 100 hours when the sit started at noon or later, versus 14.8 in the morning. That split is by sit start, not the time each deer was seen. Zone 7 afternoons were the strongest (31.2). Zone 2 was better in the morning (19.7 versus 7.5). Zone 4’s afternoon rate (2.8) rests on only 35 hours.</li>
-    <li>By clock hour, the strongest window was about 2 to 5 PM: 19.6 seen per 100 hours overall, and 25.0 in the 2nd period. Mornings were steady from first light to about 10 AM (14.4). After 5 PM the all-season rate falls, and November sunset was about 4:45 PM. These hourly figures spread each sit’s total evenly across its hours, because the app does not timestamp individual sightings.</li>
     <li>In the 2nd period, north, northeast, and northwest winds were best, at about 27 to 28 seen per 100 hours (241, 170, and 100 hours of sits). South wind was the slowest large sample, at 17.7 (358 hours). Southeast was in between, at 22.7. East, west, and southwest had little or no 2nd-period time and should not be used. October was slow in every direction with a decent sample (about 6 to 10 per 100 hours), and most of that period blew from the south or southeast, so season and wind are mixed in the all-season totals.</li>
   </ul>
-  <p class="caption">Sightings per 100 hunter-hours by clock hour, all hunt days. The 2 PM bar is the peak. Late-evening bars include time after sunset, especially in November.</p>
-  <div class="bars" id="hour-bars"></div>
   <p class="caption">Second-period sightings per 100 hunter-hours by wind direction, matched to each hour of a sit. Southwest has fewer than 50 hours. East and west had almost no 2nd-period time and are omitted.</p>
   <div class="bars" id="wind-bars"></div>
 
@@ -298,7 +295,7 @@
   <ul>
     <li>Hunt days are Oct 9–11 (1st period) and Nov 13–15 (2nd period). Stand-setup days, Oct 8 and Nov 12, and five sits on other non-hunt dates are not in the statistics.</li>
     <li>Sessions with no Out time, or lasting more than 14 hours, were dropped. Five sits, all on Oct 9 and each just over 14 hours, were excluded. No open sessions remained in the 9 PM snapshot.</li>
-    <li>Sightings are logged as a single total for each sit, not by time of day. Time-of-day and wind figures spread that total evenly across the sit’s hours, so treat those rates as approximate.</li>
+    <li>Sightings are logged as a single total for each sit, not timestamped. AM and PM rates use when the sit started, and harvest times are as entered in the app.</li>
     <li>The live public map is at <a href="https://chriskilpatrick9-deer.github.io/crow-hassan-deer-map/">chriskilpatrick9-deer.github.io/crow-hassan-deer-map</a>. It is zone-level only and does not include hunter names.</li>
   </ul>
 
@@ -341,23 +338,6 @@ renderBars(document.getElementById("period-bars"), [
   {label:"Zone 6", value:13.3, display:"7.0 → 13.3"},
   {label:"Zone 7", value:29.5, display:"13.4 → 29.5", peak:true}
 ], 30);
-renderBars(document.getElementById("hour-bars"), [
-  {label:"5 AM", value:14.5, display:"14.5"},
-  {label:"6 AM", value:14.0, display:"14.0"},
-  {label:"7 AM", value:15.2, display:"15.2"},
-  {label:"8 AM", value:14.9, display:"14.9"},
-  {label:"9 AM", value:13.5, display:"13.5"},
-  {label:"10 AM", value:15.2, display:"15.2"},
-  {label:"11 AM", value:16.3, display:"16.3"},
-  {label:"12 PM", value:17.3, display:"17.3"},
-  {label:"1 PM", value:17.1, display:"17.1"},
-  {label:"2 PM", value:21.8, display:"21.8", peak:true},
-  {label:"3 PM", value:19.6, display:"19.6"},
-  {label:"4 PM", value:18.1, display:"18.1"},
-  {label:"5 PM", value:16.2, display:"16.2"},
-  {label:"6 PM", value:11.3, display:"11.3"},
-  {label:"7 PM", value:10.7, display:"10.7"}
-], 25);
 renderBars(document.getElementById("wind-bars"), [
   {label:"N", value:27.2, display:"27.2 · 241 h"},
   {label:"NE", value:26.9, display:"26.9 · 170 h"},
