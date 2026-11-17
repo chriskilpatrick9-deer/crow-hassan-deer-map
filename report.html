@@ -1,16 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2026 Crow-Hassan Deer Hunt: Final Coordinator Report</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>2026 Crow-Hassan Park Reserve Deer Hunt: Final Report</title><meta name="description" content="16 harvest entries over 6 hunt days at Crow-Hassan Park Reserve (MBRB hunt 10). Hunters logged 379 deer seen in 2,436 hours, or 15.6 per 100 hours. 15 of 16 entries are listed as recovered (94%); 1 wounded.">
 <script>(function(){try{var t=localStorage.getItem('mbrb-theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
-
-<meta name="description" content="Final 2026 Crow-Hassan Park Reserve deer hunt report: 16 harvest entries, 15 of 16 recovered, 371 deer seen in 2,364 hunter-hours. Zone-level only.">
-<meta name="robots" content="noindex">
-<meta property="og:title" content="2026 Crow-Hassan Deer Hunt: Final Coordinator Report">
-<meta property="og:description" content="16 harvest entries, 15 of 16 recovered (94%). 461 sits, 2,364 hours, 371 deer seen. Zone-level, no names.">
-<meta property="og:type" content="article">
 <style>
   :root {
     --bg: #f6f3ec;
@@ -86,7 +78,7 @@
     border-radius: 10px;
     background: var(--paper);
   }
-  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 36rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 42rem; }
   th, td { padding: 0.5rem 0.65rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
   th { font-size: 0.78rem; text-transform: none; letter-spacing: 0; color: var(--muted); font-weight: 600; background: #f3eee4; position: sticky; top: 0; }
   td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
@@ -137,226 +129,126 @@
     .banner, a { color: inherit; }
   }
 
-  .themebtn { float: right; width: 2.2rem; height: 2.2rem; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--ink); font-size: 1.05rem; line-height: 2.15rem; text-align: center; padding: 0; cursor: pointer; }
+  .crumbs { font-size: 0.88rem; margin: 0 0 0.6rem; }
+  nav a { display:inline-block; }
+  .pbar { grid-template-columns: 6.5rem 1fr; }
+  .bar { grid-template-columns: 6.5rem 1fr 5.4rem; }
+  .bar-legend span { white-space: nowrap; }
+
+  .themebtn {
+    float: right;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 1.05rem;
+    line-height: 2.15rem;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+  }
+
   html[data-theme="dark"] {
-    --bg: #16181b; --paper: #22262b; --ink: #e8eaed; --muted: #9aa3ab; --line: #3a4148;
-    --accent: #8fbf96; --accent-soft: #243128; --warn-bg: #3a2e18; --warn-ink: #f0c98a; --fill-low: #2c2a22;
+    --bg: #16181b;
+    --paper: #22262b;
+    --ink: #e8eaed;
+    --muted: #9aa3ab;
+    --line: #3a4148;
+    --accent: #8fbf96;
+    --accent-soft: #243128;
+    --warn-bg: #3a2e18;
+    --warn-ink: #f0c98a;
+    --fill-low: #2c2a22;
   }
   html[data-theme="dark"] .banner { border-color: #3d5a40; }
   html[data-theme="dark"] th { background: #2a2f35; color: var(--muted); }
   html[data-theme="dark"] .bar .track, html[data-theme="dark"] .pbar .track { background: #3a4148; }
   html[data-theme="dark"] a { color: var(--accent); }
+  html[data-theme="dark"] .themebtn { background: var(--paper); color: var(--ink); }
 
-</style>
-</head>
-<body>
-<main>
-  <h1>2026 Crow-Hassan Deer Hunt: Final Coordinator Report <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></h1>
-  <p class="lede">Sixteen harvest entries over six hunt days at Crow-Hassan Park Reserve (MBRB hunt 10). Hunters logged 371 deer seen in 2,364 hours, or 15.7 per 100 hours. Fifteen of the 16 entries are listed as recovered; one Nov 15 Zone 3 adult buck is listed as wounded.</p>
-  <nav class="muted">
-    <a href="#totals">Totals</a>
-    <a href="#map-section">Map</a>
-    <a href="#zones">By zone</a>
-    <a href="#harvests">Harvests</a>
-    <a href="#findings">Findings</a>
-    <a href="#weather">Weather</a>
-    <a href="#notes">Notes</a>
-  </nav>
-  <div class="banner">
-    <strong>2026 app data only.</strong>
-    Figures come from the MBRB hunter app for hunt 10, after the 9 PM CT refresh on Nov 15, 2026 (source pages saved 9:11–9:18 PM CT). Setup days (Oct 8 and Nov 12) and a handful of non-hunt sits are excluded. This report is zone-level only: it has no hunter names or stand locations, and it does not use 2024 or 2025 timesheets or the official recap.
-  </div>
+  .wx-analysis {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.55rem 1.1rem 0.65rem;
+    margin: 0.7rem 0 1rem;
+  }
+  .wx-analysis li { margin: 0.55rem 0; }
+  table { min-width: 42rem; }
 
-  <h2 id="totals">Headline totals</h2>
-  <div class="metrics">
-    <div class="metric"><strong>16</strong><span>Harvest entries</span><em>8 adult bucks, 4 adult does, 4 fawn bucks · 6 in October, 10 in November</em></div>
-    <div class="metric"><strong>15 of 16</strong><span>Recovered</span><em>94% recovery · 1 listed as wounded</em></div>
-    <div class="metric"><strong>461</strong><span>Hunter sits</span><em>2,364 hours · 371 deer seen</em></div>
-    <div class="metric"><strong>15.7</strong><span>Seen per 100 hours</span><em>6.7 in the 1st period · 23.0 in the 2nd period</em></div>
-  </div>
-  <div class="scroll">
-    <table>
-      <thead>
-        <tr><th></th><th class="num">1st period (Oct 9–11)</th><th class="num">2nd period (Nov 13–15)</th><th class="num">Hunt total</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Harvest entries</td><td class="num">6</td><td class="num">10</td><td class="num">16</td></tr>
-        <tr><td>Recovered</td><td class="num">6 of 6</td><td class="num">9 of 10</td><td class="num">15 of 16</td></tr>
-        <tr><td>Hunter sits</td><td class="num">240</td><td class="num">221</td><td class="num">461</td></tr>
-        <tr><td>Hours</td><td class="num">1,060</td><td class="num">1,304</td><td class="num">2,364</td></tr>
-        <tr><td>Deer seen</td><td class="num">71</td><td class="num">300</td><td class="num">371</td></tr>
-        <tr><td>Seen per 100 hours</td><td class="num">6.7</td><td class="num">23.0</td><td class="num">15.7</td></tr>
-      </tbody>
-    </table>
-  </div>
+  .srec { margin: 1rem 0 0.4rem; }
+  .srec-h { font-size: 1.05rem; font-weight: 650; margin: 1.3rem 0 0.4rem; }
+  .srec-leg { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; font-size: 0.82rem; color: var(--muted); margin: 0 0 0.55rem; }
+  .srec-leg i { display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 2px; margin-right: 0.3rem; vertical-align: -1px; }
+  .srow { display: grid; grid-template-columns: 7.2rem 1fr 7.2rem; gap: 0.45rem; align-items: center; font-size: 0.88rem; margin: 0 0 0.4rem; }
+  .srow .lbl { color: var(--muted); }
+  .srow .track { background: #ece6d8; border-radius: 4px; height: 0.7rem; overflow: hidden; display: flex; }
+  .srow .seg { display: block; height: 100%; min-width: 0; }
+  .srow .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+  .st-rec { background: var(--accent); }
+  .st-wnd { background: #b5451b; }
+  .st-ns, .st-ot { background: #8a7a5a; }
+  html[data-theme="dark"] .srow .track { background: #3a4148; }
+  html[data-theme="dark"] .st-rec { background: var(--accent); }
+  html[data-theme="dark"] .st-wnd { background: #e07a4c; }
+  html[data-theme="dark"] .st-ns, html[data-theme="dark"] .st-ot { background: #c4b48a; }
+  @media (max-width: 520px) {
+    .srow { grid-template-columns: 5.6rem 1fr 5.4rem; font-size: 0.8rem; }
+    .srow .val { white-space: normal; }
+  }
+</style></head><body><main>
+<p class="muted crumbs"><a href="./">Map</a> <button type="button" id="themebtn" class="themebtn" aria-label="Switch to dark mode" title="Dark mode">☾</button></p>
+<h1>2026 Crow-Hassan Park Reserve Deer Hunt: Final Report</h1>
+<p class="lede">16 harvest entries over 6 hunt days at Crow-Hassan Park Reserve (MBRB hunt 10). Hunters logged 379 deer seen in 2,436 hours, or 15.6 per 100 hours. 15 of 16 entries are listed as recovered (94%); 1 wounded.</p>
+<nav class="muted"><a href="#totals">Totals</a><a href="#map-section">Map</a><a href="#zones">By zone</a><a href="#harvests">Harvests</a><a href="#findings">Findings</a><a href="#weather">Weather</a><a href="#notes">Notes</a></nav>
+<div class="banner"><strong>2026 app data only.</strong> Figures come from the MBRB hunter app for hunt 10 (pages saved Nov 15, 2026 9:18 PM CT). Totals cover hunt days only. No hunter names or stand locations.</div>
+<h2 id="totals">Headline totals</h2>
+<div class="metrics"><div class="metric"><strong>16</strong><span>Harvest entries</span><em>4 adult does, 4 fawn bucks, 8 adult bucks · 6 in the 1st period · 10 in the 2nd period</em></div><div class="metric"><strong>15 of 16</strong><span>Recovered</span><em>94% recovery · 1 wounded</em></div><div class="metric"><strong>466</strong><span>Hunter sits</span><em>2,436 hours · 379 deer seen</em></div><div class="metric"><strong>15.6</strong><span>Seen per 100 hours</span><em>7.0 in the 1st · 23.0 in the 2nd</em></div></div>
+<div class="scroll"><table><thead><tr><th></th><th class="num">1st period (Oct 9–11)</th><th class="num">2nd period (Nov 13–15)</th><th class="num">Hunt total</th></tr></thead><tbody><tr><td>Harvest entries</td><td class="num">6</td><td class="num">10</td><td class="num">16</td></tr><tr><td>Recovered</td><td class="num">6 of 6</td><td class="num">9 of 10</td><td class="num">15 of 16</td></tr><tr><td>Hunter sits</td><td class="num">245</td><td class="num">221</td><td class="num">466</td></tr><tr><td>Hours</td><td class="num">1,131</td><td class="num">1,304</td><td class="num">2,436</td></tr><tr><td>Deer seen</td><td class="num">79</td><td class="num">300</td><td class="num">379</td></tr><tr><td>Seen per 100 hours</td><td class="num">7.0</td><td class="num">23.0</td><td class="num">15.6</td></tr></tbody></table></div>
+<h2 id="map-section">Overall map</h2>
+<p class="caption">Zone-level map: Esri imagery with zones shaded by sightings. No hunter names or stand locations.</p>
+<div class="map-frame"><iframe src="index.html" title="Crow-Hassan Park Reserve zone map" loading="eager"></iframe></div>
+<p class="caption"><a href="https://chriskilpatrick9-deer.github.io/crow-hassan-deer-map/">Open full map</a></p>
 
-  <h2 id="map-section">Overall map</h2>
-  <p class="caption">The map below is the same zone heatmap as the public map: Esri imagery, heat by sightings, zone labels, and harvest markers. It is zone-level only and has no hunter names or stand locations. Use the layers button on the map to turn heat and zone shading on or off.</p>
-  <div class="map-frame">
-    <iframe src="index.html" title="Crow-Hassan deer activity heatmap" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-  <p class="caption"><a href="https://chriskilpatrick9-deer.github.io/crow-hassan-deer-map/">Open full map</a></p>
-  <p class="caption"><a href="https://chriskilpatrick9-deer.github.io/chm-a4oneez088/report.html">Coordinators: detailed hunter heatmap</a></p>
-
-  <h2 id="zones">By zone</h2>
-  <p class="caption">Rate is deer seen per 100 hunter-hours. AM and PM are based on when the sit started (AM = in before noon). An asterisk marks a rate with fewer than 50 hunter-hours.</p>
-  <div class="scroll">
-    <table>
-      <thead>
-        <tr>
-          <th>Zone</th><th class="num">Sits</th><th class="num">Hours</th><th class="num">Seen</th><th class="num">Rate</th>
-          <th>Harvests</th><th class="num">AM rate</th><th class="num">PM rate</th>
-          <th class="num">1st period</th><th class="num">2nd period</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td class="num">72</td><td class="num">295</td><td class="num">50</td><td class="num rate">16.9</td><td>0</td><td class="num">17.4</td><td class="num">16.3</td><td class="num">9.3</td><td class="num">22.0</td></tr>
-        <tr><td>2</td><td class="num">75</td><td class="num">416</td><td class="num">66</td><td class="num rate">15.9</td><td>4: 2 adult bucks, 1 adult doe, 1 fawn buck</td><td class="num">19.7</td><td class="num">7.5</td><td class="num">5.2</td><td class="num">27.0</td></tr>
-        <tr><td>3</td><td class="num">58</td><td class="num">269</td><td class="num">39</td><td class="num rate">14.5</td><td>3: 2 adult bucks, 1 fawn buck</td><td class="num">12.6</td><td class="num">18.9</td><td class="num">4.3</td><td class="num">22.1</td></tr>
-        <tr><td>4</td><td class="num">41</td><td class="num">244</td><td class="num">31</td><td class="num rate">12.7</td><td>1: 1 adult buck</td><td class="num">14.4</td><td class="num">2.8*</td><td class="num">0.9</td><td class="num">22.1</td></tr>
-        <tr><td>5</td><td class="num">90</td><td class="num">559</td><td class="num">93</td><td class="num rate">16.6</td><td>1: 1 adult doe</td><td class="num">15.2</td><td class="num">22.7</td><td class="num">5.8</td><td class="num">23.8</td></tr>
-        <tr><td>6</td><td class="num">57</td><td class="num">286</td><td class="num">30</td><td class="num rate">10.5</td><td>2: 1 adult buck, 1 adult doe</td><td class="num">8.0</td><td class="num">16.3</td><td class="num">7.0</td><td class="num">13.3</td></tr>
-        <tr><td>7</td><td class="num">68</td><td class="num">295</td><td class="num">62</td><td class="num rate">21.0</td><td>5: 2 adult bucks, 1 adult doe, 2 fawn bucks</td><td class="num">13.8</td><td class="num">31.2</td><td class="num">13.4</td><td class="num">29.5</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="caption">Sightings per 100 hours, 1st period then 2nd period, left to right</p>
-  <div class="bar-legend"><span><i class="p1"></i>1st period (Oct 9–11)</span><span><i class="p2"></i>2nd period (Nov 13–15)</span></div>
-  <div class="bars" id="period-bars"></div>
-
-  <h2 id="harvests">Harvests and recovery</h2>
-  <p class="caption">Every harvest row in the MBRB app has an explicit Status of Recovered or Wounded. Recovery rate is recovered divided by all listed entries. Times are as entered in the app. Some evening times fall after legal shooting hours and may be when the harvest was logged rather than when it occurred.</p>
-  <div class="metrics">
-    <div class="metric"><strong>94%</strong><span>Recovery rate</span><em>15 recovered, 1 wounded, of 16 entries</em></div>
-    <div class="metric"><strong>100%</strong><span>1st period</span><em>6 of 6 recovered</em></div>
-    <div class="metric"><strong>90%</strong><span>2nd period</span><em>9 of 10 recovered</em></div>
-  </div>
-  <p>The one wounded entry is an adult buck in Zone 3, listed at 6:21 PM CT on Nov 15. It is included in the 16 entries and in the wounded count, not in the recovered count. Zone-level recovery rates rest on small numbers: Zone 3 is 2 of 3 (67%) because of that single wounded entry. Every other zone with a harvest is 4 of 4, 1 of 1, 2 of 2, or 5 of 5. Zone 1 had no harvests, so it has no recovery rate.</p>
-  <div class="scroll">
-    <table>
-      <thead><tr><th></th><th class="num">Entries</th><th class="num">Recovered</th><th class="num">Wounded</th><th class="num">Recovery rate</th></tr></thead>
-      <tbody>
-        <tr><td>Hunt total</td><td class="num">16</td><td class="num">15</td><td class="num">1</td><td class="num">94% (15/16)</td></tr>
-        <tr><td>1st period</td><td class="num">6</td><td class="num">6</td><td class="num">0</td><td class="num">100%</td></tr>
-        <tr><td>2nd period</td><td class="num">10</td><td class="num">9</td><td class="num">1</td><td class="num">90% (9/10)</td></tr>
-        <tr><td>Zone 2</td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td class="num">100%</td></tr>
-        <tr><td>Zone 3</td><td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num">67% (2/3)</td></tr>
-        <tr><td>Zone 4</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">100%</td></tr>
-        <tr><td>Zone 5</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">100%</td></tr>
-        <tr><td>Zone 6</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">100%</td></tr>
-        <tr><td>Zone 7</td><td class="num">5</td><td class="num">5</td><td class="num">0</td><td class="num">100%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="scroll">
-    <table>
-      <thead><tr><th>When</th><th class="num">Zone</th><th>Type</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr><td>Oct 9, 8:17 PM</td><td class="num">7</td><td>Fawn buck</td><td>Recovered</td></tr>
-        <tr><td>Oct 9, 8:36 PM</td><td class="num">7</td><td>Adult buck</td><td>Recovered</td></tr>
-        <tr><td>Oct 10, 8:34 PM</td><td class="num">7</td><td>Adult doe</td><td>Recovered</td></tr>
-        <tr><td>Oct 10, 8:36 PM</td><td class="num">7</td><td>Fawn buck</td><td>Recovered</td></tr>
-        <tr><td>Oct 10, 8:59 PM</td><td class="num">4</td><td>Adult buck</td><td>Recovered</td></tr>
-        <tr><td>Oct 11, 8:38 AM</td><td class="num">7</td><td>Adult buck</td><td>Recovered</td></tr>
-        <tr><td>Nov 13, 8:00 AM</td><td class="num">6</td><td>Adult buck</td><td>Recovered</td></tr>
-        <tr><td>Nov 13, 11:48 AM</td><td class="num">5</td><td>Adult doe</td><td>Recovered</td></tr>
-        <tr><td>Nov 13, 6:04 PM</td><td class="num">2</td><td>Adult buck</td><td>Recovered</td></tr>
-        <tr><td>Nov 13, 6:54 PM</td><td class="num">2</td><td>Fawn buck</td><td>Recovered</td></tr>
-        <tr><td>Nov 14, 12:00 AM</td><td class="num">2</td><td>Adult buck</td><td>Recovered</td></tr>
-        <tr><td>Nov 14, 10:11 AM</td><td class="num">2</td><td>Adult doe</td><td>Recovered</td></tr>
-        <tr><td>Nov 14, 11:14 AM</td><td class="num">6</td><td>Adult doe</td><td>Recovered</td></tr>
-        <tr><td>Nov 14, 5:50 PM</td><td class="num">3</td><td>Fawn buck</td><td>Recovered</td></tr>
-        <tr><td>Nov 15, 7:30 AM</td><td class="num">3</td><td>Adult buck</td><td>Recovered</td></tr>
-        <tr><td>Nov 15, 6:21 PM</td><td class="num">3</td><td>Adult buck</td><td><span class="wounded">Wounded</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 id="findings">Findings</h2>
-  <ul>
-    <li>The 2nd period was much busier than the 1st. November sits saw 23.0 deer per 100 hours, more than three times the October rate of 6.7, and 10 of the 16 harvests came then. October was also unusually warm, with highs in the 70s and 90s.</li>
-    <li>Afternoon sits had a modest edge: 17.9 seen per 100 hours when the sit started at noon or later, versus 14.8 in the morning. That split is by sit start, not the time each deer was seen. Zone 7 afternoons were the strongest (31.2). Zone 2 was better in the morning (19.7 versus 7.5). Zone 4’s afternoon rate (2.8) rests on only 35 hours.</li>
-    <li>In the 2nd period, north, northeast, and northwest winds were best, at about 27 to 28 seen per 100 hours (241, 170, and 100 hours of sits). South wind was the slowest large sample, at 17.7 (358 hours). Southeast was in between, at 22.7. East, west, and southwest had little or no 2nd-period time and should not be used. October was slow in every direction with a decent sample (about 6 to 10 per 100 hours), and most of that period blew from the south or southeast, so season and wind are mixed in the all-season totals.</li>
-  </ul>
-  <p class="caption">Second-period sightings per 100 hunter-hours by wind direction, matched to each hour of a sit. Southwest has fewer than 50 hours. East and west had almost no 2nd-period time and are omitted.</p>
-  <div class="bars" id="wind-bars"></div>
-
-  <h2 id="weather">Day-by-day weather</h2>
-  <p class="caption">Hourly weather from Open-Meteo for a point near the park (about 45.19°N, 93.63°W). Wind is the daily mean speed and vector-mean direction. Lows and highs are in °F.</p>
-  <div class="scroll">
-    <table>
-      <thead>
-        <tr><th>Day</th><th>Period</th><th class="num">Low / high</th><th>Wind</th><th class="num">Gusts</th><th>Pressure</th><th>Sunrise / sunset</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Fri, Oct 9</td><td>1st</td><td class="num">44 / 73°F</td><td>ESE, 8 mph</td><td class="num">24 mph</td><td>Falling</td><td>7:22 AM / 6:39 PM</td></tr>
-        <tr><td>Sat, Oct 10</td><td>1st</td><td class="num">60 / 90°F</td><td>S, 14 mph</td><td class="num">36 mph</td><td>Falling</td><td>7:24 AM / 6:38 PM</td></tr>
-        <tr><td>Sun, Oct 11</td><td>1st</td><td class="num">67 / 88°F</td><td>S, 10 mph</td><td class="num">38 mph</td><td>Steady</td><td>7:25 AM / 6:36 PM</td></tr>
-        <tr><td>Fri, Nov 13</td><td>2nd</td><td class="num">19 / 39°F</td><td>NNE, 4 mph</td><td class="num">10 mph</td><td>Rising</td><td>7:10 AM / 4:47 PM</td></tr>
-        <tr><td>Sat, Nov 14</td><td>2nd</td><td class="num">19 / 44°F</td><td>SSE, 3 mph</td><td class="num">9 mph</td><td>Rising</td><td>7:11 AM / 4:45 PM</td></tr>
-        <tr><td>Sun, Nov 15</td><td>2nd</td><td class="num">25 / 50°F</td><td>S, 6 mph</td><td class="num">20 mph</td><td>Steady</td><td>7:12 AM / 4:44 PM</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 id="notes">Notes</h2>
-  <ul>
-    <li>Hunt days are Oct 9–11 (1st period) and Nov 13–15 (2nd period). Stand-setup days, Oct 8 and Nov 12, and five sits on other non-hunt dates are not in the statistics.</li>
-    <li>Sessions with no Out time, or lasting more than 14 hours, were dropped. Five sits, all on Oct 9 and each just over 14 hours, were excluded. No open sessions remained in the 9 PM snapshot.</li>
-    <li>Sightings are logged as a single total for each sit, not timestamped. AM and PM rates use when the sit started, and harvest times are as entered in the app.</li>
-    <li>The live public map is at <a href="https://chriskilpatrick9-deer.github.io/crow-hassan-deer-map/">chriskilpatrick9-deer.github.io/crow-hassan-deer-map</a>. It is zone-level only and does not include hunter names.</li>
-  </ul>
-
-  <footer>
-    Crow-Hassan Park Reserve · MBRB hunt 10 · 2026 app data · as of Nov 15, 2026 9:18 PM CT
-  </footer>
+<h2 id="zones">By zone</h2>
+<p class="caption">Rate is deer seen per 100 hunter-hours. AM and PM are based on when the sit started. An asterisk marks a rate with fewer than 50 hunter-hours.</p>
+<div class="scroll"><table><thead><tr><th>Zone</th><th class="num">Sits</th><th class="num">Hours</th><th class="num">Seen</th><th class="num">Rate</th><th>Harvests</th><th class="num">AM rate</th><th class="num">PM rate</th><th class="num">1st period</th><th class="num">2nd period</th></tr></thead><tbody><tr><td>Zone 1</td><td class="num">72</td><td class="num">295</td><td class="num">50</td><td class="num rate">16.9</td><td>0</td><td class="num">17.4</td><td class="num">16.3</td><td class="num">9.3</td><td class="num">22.0</td></tr><tr><td>Zone 2</td><td class="num">75</td><td class="num">416</td><td class="num">66</td><td class="num rate">15.9</td><td>1 AD, 1 FB, 2 AB</td><td class="num">19.7</td><td class="num">7.5</td><td class="num">5.2</td><td class="num">27.0</td></tr><tr><td>Zone 3</td><td class="num">58</td><td class="num">269</td><td class="num">39</td><td class="num rate">14.5</td><td>1 FB, 2 AB <span class=wounded>1 not recovered</span></td><td class="num">12.6</td><td class="num">18.9</td><td class="num">4.3</td><td class="num">22.1</td></tr><tr><td>Zone 4</td><td class="num">41</td><td class="num">244</td><td class="num">31</td><td class="num rate">12.7</td><td>1 AB</td><td class="num">14.4</td><td class="num">2.8*</td><td class="num">0.9</td><td class="num">22.1</td></tr><tr><td>Zone 5</td><td class="num">91</td><td class="num">573</td><td class="num">93</td><td class="num rate">16.2</td><td>1 AD</td><td class="num">14.8</td><td class="num">22.7</td><td class="num">5.5</td><td class="num">23.8</td></tr><tr><td>Zone 6</td><td class="num">60</td><td class="num">329</td><td class="num">38</td><td class="num rate">11.5</td><td>1 AD, 1 AB</td><td class="num">9.9</td><td class="num">16.3</td><td class="num">9.9</td><td class="num">13.3</td></tr><tr><td>Zone 7</td><td class="num">69</td><td class="num">309</td><td class="num">62</td><td class="num rate">20.0</td><td>1 AD, 2 FB, 2 AB</td><td class="num">12.8</td><td class="num">31.2</td><td class="num">12.3</td><td class="num">29.5</td></tr></tbody></table></div>
+<h3>Sightings per 100 hours by zone and period</h3>
+<div class="bar-legend"><span><i style="background:#8aa889"></i>1st period (Oct 9–11)</span><span><i style="background:#2f5d3a"></i>2nd period (Nov 13–15)</span></div>
+<div class="bars" id="period-bars"></div>
+<h2 id="harvests">Harvests</h2>
+<div class="scroll"><table><thead><tr><th>Date</th><th>Period</th><th>Zone</th><th>Stand type</th><th>Deer</th><th>Status</th></tr></thead><tbody><tr><td>Oct 9</td><td>1st</td><td>Zone 7</td><td>Hang-On</td><td>Adult Buck</td><td>Recovered</td></tr><tr><td>Oct 9</td><td>1st</td><td>Zone 7</td><td>Hang-On</td><td>Fawn Buck</td><td>Recovered</td></tr><tr><td>Oct 10</td><td>1st</td><td>Zone 4</td><td>Saddle</td><td>Adult Buck</td><td>Recovered</td></tr><tr><td>Oct 10</td><td>1st</td><td>Zone 7</td><td>Hang-On</td><td>Fawn Buck</td><td>Recovered</td></tr><tr><td>Oct 10</td><td>1st</td><td>Zone 7</td><td>Hang-On</td><td>Adult Doe</td><td>Recovered</td></tr><tr><td>Oct 11</td><td>1st</td><td>Zone 7</td><td>Saddle</td><td>Adult Buck</td><td>Recovered</td></tr><tr><td>Nov 13</td><td>2nd</td><td>Zone 2</td><td>Hang-On</td><td>Fawn Buck</td><td>Recovered</td></tr><tr><td>Nov 13</td><td>2nd</td><td>Zone 2</td><td>Hang-On</td><td>Adult Buck</td><td>Recovered</td></tr><tr><td>Nov 13</td><td>2nd</td><td>Zone 5</td><td>Hang-On</td><td>Adult Doe</td><td>Recovered</td></tr><tr><td>Nov 13</td><td>2nd</td><td>Zone 6</td><td>Climber</td><td>Adult Buck</td><td>Recovered</td></tr><tr><td>Nov 14</td><td>2nd</td><td>Zone 2</td><td>Hang-On</td><td>Adult Doe</td><td>Recovered</td></tr><tr><td>Nov 14</td><td>2nd</td><td>Zone 2</td><td>Hang-On</td><td>Adult Buck</td><td>Recovered</td></tr><tr><td>Nov 14</td><td>2nd</td><td>Zone 3</td><td>Saddle</td><td>Fawn Buck</td><td>Recovered</td></tr><tr><td>Nov 14</td><td>2nd</td><td>Zone 6</td><td>Ladder</td><td>Adult Doe</td><td>Recovered</td></tr><tr><td>Nov 15</td><td>2nd</td><td>Zone 3</td><td>Saddle</td><td>Adult Buck</td><td><span class=wounded>Wounded</span></td></tr><tr><td>Nov 15</td><td>2nd</td><td>Zone 3</td><td>Hang-On</td><td>Adult Buck</td><td>Recovered</td></tr></tbody></table></div>
+<div class="srec"><div class="srec-h">Recovery by stand type</div><div class="srec-leg"><span><i class="st-rec"></i>Recovered</span><span><i class="st-wnd"></i>Wounded</span></div><div class="srow"><span class="lbl">Hang-On</span><span class="track"><span class="seg st-rec" style="width:100.000%" title="Recovered: 10"></span></span><span class="val">10 of 10 (100%)</span></div><div class="srow"><span class="lbl">Saddle</span><span class="track"><span class="seg st-rec" style="width:75.000%" title="Recovered: 3"></span><span class="seg st-wnd" style="width:25.000%" title="Wounded: 1"></span></span><span class="val">3 of 4 (75%)</span></div><div class="srow"><span class="lbl">Climber</span><span class="track"><span class="seg st-rec" style="width:100.000%" title="Recovered: 1"></span></span><span class="val">1 of 1 (100%)</span></div><div class="srow"><span class="lbl">Ladder</span><span class="track"><span class="seg st-rec" style="width:100.000%" title="Recovered: 1"></span></span><span class="val">1 of 1 (100%)</span></div></div>
+<h2 id="findings">Findings</h2>
+<ul><li>Highest sighting rate: Zone 7 at 20.0 per 100 hours; lowest: Zone 6 at 11.5 (zones with at least 50 hunter-hours).</li><li>By period: 1st 7.0 per 100 h over 1,131 h, 6 harvests; 2nd 23.0 per 100 h over 1,304 h, 10 harvests.</li><li>Sits started in the morning saw 14.7 per 100 h (1,758 h); afternoon sits 17.9 per 100 h (677 h).</li><li>Recovery: 15 of 16 harvest entries (94%); not recovered: 1 wounded.</li></ul>
+<p class="caption">Sightings per 100 hunter-hours by wind direction, with each hour of a sit matched to that hour’s wind and a sit’s sightings shared evenly across its hours. Directions with under 10 hours are omitted; * = under 50 hours.</p><div class="bars" id="wind-bars"></div>
+<h2 id="weather">Day-by-day weather</h2>
+<p class="caption">Hourly weather from Open-Meteo for the park centre (about 45.18°N, 93.64°W). Wind is the daily mean speed and vector-mean direction. Pressure is the day’s trend and morning-to-evening reading (inches of mercury).</p>
+<div class="scroll"><table><thead><tr><th>Day</th><th>Period</th><th class="num">Low / high</th><th>Wind</th><th class="num">Gusts</th><th>Pressure</th><th>Moon</th><th>Sunrise / sunset</th></tr></thead><tbody><tr><td>Fri, Oct 9</td><td>1st</td><td class="num">44 / 73°F</td><td>ESE, 8.4 mph</td><td class="num">24 mph</td><td>Falling 30.07–29.79</td><td>New Moon, 3%</td><td>7:22 AM / 6:39 PM</td></tr><tr><td>Sat, Oct 10</td><td>1st</td><td class="num">60 / 90°F</td><td>S, 14 mph</td><td class="num">36 mph</td><td>Falling 29.78–29.67</td><td>New Moon, 1%</td><td>7:24 AM / 6:38 PM</td></tr><tr><td>Sun, Oct 11</td><td>1st</td><td class="num">67 / 88°F</td><td>S, 9.7 mph</td><td class="num">38 mph</td><td>Steady 29.68–29.67</td><td>New Moon, 0%</td><td>7:25 AM / 6:36 PM</td></tr><tr><td>Fri, Nov 13</td><td>2nd</td><td class="num">19 / 39°F</td><td>NNE, 3.8 mph</td><td class="num">10 mph</td><td>Rising 30.21–30.26</td><td>Waxing Crescent, 15%</td><td>7:10 AM / 4:47 PM</td></tr><tr><td>Sat, Nov 14</td><td>2nd</td><td class="num">19 / 44°F</td><td>SSE, 2.9 mph</td><td class="num">9 mph</td><td>Rising 30.24–30.27</td><td>Waxing Crescent, 24%</td><td>7:11 AM / 4:45 PM</td></tr><tr><td>Sun, Nov 15</td><td>2nd</td><td class="num">25 / 50°F</td><td>S, 6.1 mph</td><td class="num">19 mph</td><td>Steady 30.31–30.30</td><td>First Quarter, 33%</td><td>7:12 AM / 4:44 PM</td></tr></tbody></table></div>
+<h3 id="weather-analysis">Weather and deer activity</h3><p class="caption">Sighting and harvest rates compared with each hunt day’s temperature, wind, pressure, and moon. These comparisons are observational.</p><ul class="wx-analysis"><li>Over 6 hunt days with at least 8 hunter-hours, hunters saw 15.6 deer per 100 hours and recorded 16 harvests in 466 sits. With only 6 hunt days, these patterns are suggestive, not conclusive.</li><li>The colder days (Nov 13–15, lows 19–25°F) had 23.0 per 100 hours and 10 harvests in 221 sits (4.5 per 100 sits), compared with 7.0 per 100 hours and 6 harvests in 245 sits (2.4 per 100 sits) on the warmer days (Oct 9–11, lows 44–67°F). The two sets fell in different hunt periods and also differed in rising versus falling pressure and calmer versus windier conditions, so these factors cannot be separated from temperature.</li><li>Sits that started in the morning had 14.7 per 100 hours and 7 harvests in 282 sits (2.5 per 100 sits), with sit-time temperatures averaging 47°F. Afternoon sits had 17.9 per 100 hours and 9 harvests in 184 sits (4.9 per 100 sits), with sit-time temperatures averaging 62°F.</li><li>The highest sighting rate was on Nov 13 (27.5 per 100 hours, 4 harvests, 19–39°F, NNE at 3.8 mph, rising pressure).</li></ul>
+<h2 id="notes">Notes</h2>
+<ul><li>Figures are 2026 MBRB app data only. The 2024 and 2025 spreadsheet overlay used on the coordinator map is not in these totals.</li><li>Hunt days are Oct 9–11 (1st period); Nov 13–15 (2nd period), as listed on the MBRB hunt page. Stand-setup days (Oct 8, Nov 12) and any sits on other dates are not in the statistics.</li><li>Sightings are logged as a single total for each sit at check-out, not timestamped. AM and PM rates use when the sit started (AM = in before noon). Rates marked * have fewer than 50 hunter-hours.</li><li>Harvest entries include wounded deer; Recovered means the app status is “Recovered”. A harvest is dated from the hunter’s matching sit when the logged date has no sit; otherwise the date is as entered in the app.</li><li>This report is zone-level only. It has no hunter names or stand locations.</li><li>Weather is hourly Open-Meteo data at the park centre. The weather analysis covers hunt days only (no setup days) and is observational — with few days it is suggestive, not conclusive.</li></ul>
+<footer>Crow-Hassan Park Reserve · MBRB hunt 10 · 2026 app data · report generated Nov 17, 2026 9:10 AM CT</footer>
 </main>
 <script>
+const COL=["#8aa889", "#2f5d3a"];
 function renderBars(el, rows, maxVal) {
-  const max = maxVal || Math.max(...rows.map((r) => r.value));
-  el.innerHTML = rows.map((r) => {
-    const w = Math.max(2, (r.value / max) * 100);
-    const peak = r.peak ? " font-weight:650;" : "";
-    return `<div class="bar"><div class="lbl">${r.label}</div><div class="track"><div class="fill" style="width:${w}%"></div></div><div class="val" style="${peak}">${r.display}</div></div>`;
-  }).join("");
+  const max = maxVal || Math.max(...rows.map((r) => r.value), 1);
+  el.innerHTML = rows.map((r) => `<div class="bar"><div class="lbl">${r.label}</div><div class="track"><div class="fill" style="width:${Math.max(2, r.value / max * 100)}%"></div></div><div class="val" style="${r.peak ? 'font-weight:650;' : ''}">${r.display}</div></div>`).join("");
 }
-function renderPeriodBars(el, rows, maxVal) {
-  const max = maxVal || Math.max(...rows.flatMap((r) => [r.first, r.second]));
-  el.innerHTML = rows.map((r) => {
-    const w1 = Math.max(2, (r.first / max) * 100);
-    const w2 = Math.max(2, (r.second / max) * 100);
-    const peak = r.peak ? " font-weight:650;" : "";
-    return `<div class="pbar"><div class="lbl">${r.label}</div><div class="pair"><div class="col"><div class="track"><div class="fill p1" style="width:${w1}%"></div></div><div class="val">${r.first.toFixed(1)}</div></div><div class="col"><div class="track"><div class="fill p2" style="width:${w2}%"></div></div><div class="val" style="${peak}">${r.second.toFixed(1)}</div></div></div></div>`;
-  }).join("");
+function renderPeriodBars(el, rows) {
+  const max = Math.max(1, ...rows.flatMap((r) => r.v.filter((v) => v !== null)));
+  el.innerHTML = rows.map((r) => `<div class="pbar"><div class="lbl">${r.label}</div><div class="pair" style="grid-template-columns:repeat(${r.v.length},1fr)">` +
+    r.v.map((v, i) => `<div class="col"><div class="track"><div class="fill" style="background:${COL[i]};width:${v === null ? 0 : Math.max(2, v / max * 100)}%"></div></div><div class="val">${v === null ? '—' : v.toFixed(1) + (r.lo[i] ? '*' : '')}</div></div>`).join("") + `</div></div>`).join("");
 }
-
-renderPeriodBars(document.getElementById("period-bars"), [
-  {label:"Zone 1", first:9.3, second:22.0},
-  {label:"Zone 2", first:5.2, second:27.0},
-  {label:"Zone 3", first:4.3, second:22.1},
-  {label:"Zone 4", first:0.9, second:22.1},
-  {label:"Zone 5", first:5.8, second:23.8},
-  {label:"Zone 6", first:7.0, second:13.3},
-  {label:"Zone 7", first:13.4, second:29.5, peak:true}
-], 30);
-renderBars(document.getElementById("wind-bars"), [
-  {label:"N", value:27.2, display:"27.2 · 241 h"},
-  {label:"NE", value:26.9, display:"26.9 · 170 h"},
-  {label:"SE", value:22.7, display:"22.7 · 390 h"},
-  {label:"S", value:17.7, display:"17.7 · 358 h"},
-  {label:"SW", value:19.3, display:"19.3* · 44 h"},
-  {label:"NW", value:27.8, display:"27.8 · 100 h", peak:true}
-], 30);
-</script>
-
-<script>
+renderPeriodBars(document.getElementById("period-bars"), [{"label": "Zone 1", "v": [9.3, 22.0], "lo": [false, false]}, {"label": "Zone 2", "v": [5.2, 27.0], "lo": [false, false]}, {"label": "Zone 3", "v": [4.3, 22.1], "lo": [false, false]}, {"label": "Zone 4", "v": [0.9, 22.1], "lo": [false, false]}, {"label": "Zone 5", "v": [5.5, 23.8], "lo": [false, false]}, {"label": "Zone 6", "v": [9.9, 13.3], "lo": [false, false]}, {"label": "Zone 7", "v": [12.3, 29.5], "lo": [false, false]}]);
+renderBars(document.getElementById("wind-bars"), [{"label": "N", "value": 27.2, "display": "27.2 \u00b7 241 h"}, {"label": "NE", "value": 20.3, "display": "20.3 \u00b7 283 h"}, {"label": "E", "value": 9.1, "display": "9.1* \u00b7 44 h"}, {"label": "SE", "value": 14.0, "display": "14.0 \u00b7 802 h"}, {"label": "S", "value": 11.4, "display": "11.4 \u00b7 838 h"}, {"label": "SW", "value": 15.6, "display": "15.6 \u00b7 56 h"}, {"label": "NW", "value": 27.8, "display": "27.8 \u00b7 100 h", "peak": true}]);
 (function(){const KEY='mbrb-theme',btn=document.getElementById('themebtn');
  function sys(){try{return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){return 'light'}}
  function cur(){try{const t=localStorage.getItem(KEY);if(t==='dark'||t==='light')return t}catch(e){} return sys()}
  function paint(t){document.documentElement.setAttribute('data-theme',t);if(btn){const d=t==='dark';btn.textContent=d?'☀':'☾';btn.title=d?'Light mode':'Dark mode';btn.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}}
  paint(cur());if(btn)btn.onclick=()=>{const t=cur()==='dark'?'light':'dark';try{localStorage.setItem(KEY,t)}catch(e){}paint(t)};
  try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem(KEY))return}catch(x){}paint(e.matches?'dark':'light')})}catch(e){}})();
-</script>
-
-</body>
-</html>
+</script></body></html>
